@@ -883,6 +883,119 @@ section::before {
     transform: rotate(90deg);
 }
 
+/* ===== FOOTER SECTION ===== */
+.footer-section {
+    padding: 60px 60px;
+    background: linear-gradient(135deg, rgba(4, 11, 20, 0.95) 0%, rgba(8, 14, 22, 0.95) 100%);
+    border-top: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+    min-height: auto;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.footer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 80% 50%, rgba(20, 157, 221, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-social h3 {
+    font-size: 24px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-color), #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-social-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(20, 157, 221, 0.15);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 20px;
+    border: 2px solid var(--primary-color);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.footer-social-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    z-index: -1;
+    transition: var(--transition);
+}
+
+.footer-social-icon:hover::before {
+    left: 0;
+}
+
+.footer-social-icon:hover {
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: 0 12px 30px rgba(20, 157, 221, 0.5);
+    color: #fff;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    width: 100%;
+}
+
+.footer-text p {
+    margin: 0;
+}
+
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 992px) {
     .top-navbar {
@@ -989,6 +1102,24 @@ section::before {
         padding: 10px 12px;
         font-size: 14px;
     }
+
+    .footer-section {
+        padding: 40px 25px;
+    }
+
+    .footer-social h3 {
+        font-size: 20px;
+    }
+
+    .footer-social-links {
+        gap: 15px;
+    }
+
+    .footer-social-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1008,63 +1139,39 @@ section::before {
 
     .top-nav-links a {
         font-size: 12px;
-        padding: 6px 10px;
-    }
-
-    .sidebar {
-        padding: 8px 15px;
-    }
-
-    .nav-menu a {
-        font-size: 11px;
-        padding: 6px 10px;
-    }
-
-    .nav-menu a i {
-        font-size: 16px;
-        width: 20px;
-    }
-
-    .main-content {
-        padding-top: 110px;
     }
 
     section {
         padding: 40px 15px;
-        margin-top: 15px;
     }
 
     .section-title {
         font-size: 28px;
-        margin-bottom: 20px;
     }
 
     #home h1 {
-        font-size: 44px;
-        margin-bottom: 15px;
+        font-size: 36px;
     }
 
-    #home p {
+    .footer-section {
+        padding: 30px 15px;
+    }
+
+    .footer-social h3 {
         font-size: 18px;
     }
 
-    .contact-form {
-        padding: 20px;
+    .footer-social-links {
+        gap: 12px;
     }
 
-    .form-group {
-        margin-bottom: 20px;
+    .footer-social-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
     }
 
-    .form-group label {
-        font-size: 13px;
-    }
-
-    .img-modal-close {
-        top: 15px;
-        right: 15px;
-        width: 40px;
-        height: 40px;
-        font-size: 30px;
+    .footer-text {
+        font-size: 12px;
     }
 }
