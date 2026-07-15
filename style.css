@@ -368,7 +368,7 @@ body {
     margin-top: 70px;
     width: calc(100% - 300px);
     background: linear-gradient(rgba(23, 37, 65, 0.4), rgba(23, 37, 65, 0.75)), 
-                url('https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat fixed;
+                url('https://drive.google.com/uc?export=view&id=1ZawzbUPZ3GVt-g_5lWXjnmNVFhfdhIgW') center/cover no-repeat fixed;
     position: relative;
 }
 
@@ -468,7 +468,7 @@ section::before {
 /* ===== HOME SECTION ===== */
 #home {
     background: linear-gradient(135deg, rgba(4, 11, 20, 0.8) 0%, rgba(8, 14, 22, 0.6) 100%),
-                url('https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1400&q=80') center/cover;
+                url('https://drive.google.com/uc?export=view&id=1ZawzbUPZ3GVt-g_5lWXjnmNVFhfdhIgW') center/cover;
 }
 
 #home h1 {
@@ -1002,6 +1002,10 @@ section::before {
         letter-spacing: 1px;
     }
 
+    .top-navbar .logo:hover {
+        letter-spacing: 2px;
+    }
+
     .top-nav-links {
         gap: 10px;
     }
@@ -1011,27 +1015,13 @@ section::before {
         padding: 6px 10px;
     }
 
-    .sidebar {
-        padding: 8px 15px;
-    }
-
-    .nav-menu a {
-        font-size: 11px;
-        padding: 6px 10px;
-    }
-
-    .nav-menu a i {
-        font-size: 16px;
-        width: 20px;
-    }
-
     .main-content {
-        padding-top: 110px;
+        padding-top: 120px;
     }
 
     section {
-        padding: 40px 15px;
-        margin-top: 15px;
+        padding: 50px 15px;
+        min-height: auto;
     }
 
     .section-title {
@@ -1040,7 +1030,7 @@ section::before {
     }
 
     #home h1 {
-        font-size: 44px;
+        font-size: 48px;
         margin-bottom: 15px;
     }
 
@@ -1048,23 +1038,64 @@ section::before {
         font-size: 18px;
     }
 
-    .contact-form {
+    .skills-container {
+        gap: 20px;
+    }
+
+    .skill-box {
         padding: 20px;
     }
 
+    .projects-grid {
+        gap: 20px;
+    }
+
+    .project-card {
+        border-radius: 12px;
+    }
+
+    .project-img-placeholder {
+        height: 180px;
+    }
+
+    .project-info {
+        padding: 20px;
+    }
+
+    .project-info h3 {
+        font-size: 18px;
+    }
+
+    .contact-form {
+        padding: 20px;
+        max-width: 100%;
+    }
+
     .form-group {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .form-group label {
         font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .submit-btn {
+        padding: 12px 25px;
+        font-size: 14px;
     }
 
     .img-modal-close {
         top: 15px;
         right: 15px;
+        font-size: 32px;
         width: 40px;
         height: 40px;
-        font-size: 30px;
     }
 }
